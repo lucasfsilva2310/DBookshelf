@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const RedCardContainer = styled.div`
   background: #fc5247;
-  background-image: url("https://i.postimg.cc/mk7LpLwZ/homepageback.png"); //
+  background-image: url("https://i.postimg.cc/MGTNm01L/homepageback.png"); //
   background-repeat: no-repeat; //  BackGround Image, trocar em cada pagina
   background-size: 60% 100%;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  background-position: 100%;
+  background-clip: border-box;
   border-radius: 25px;
   width: 75vw;
   height: 65vh;

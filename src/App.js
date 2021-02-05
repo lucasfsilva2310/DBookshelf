@@ -7,6 +7,7 @@ import { AllHeader } from "./styles/AllHeader";
 import { TitleContainer } from "./components/DbookshelfTitle/styledTitle";
 import { NavBarContainer } from "./components/NavigationBar/styledNav";
 import { LoginContainer } from "./components/LoginButton/styledButton";
+import { MainDescriptionContainer } from "./pages/HomePage/MainDescription/styled";
 import { Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -34,7 +35,11 @@ function App() {
           </LoginContainer>
         </AllHeader>
 
-        <RedCardContainer></RedCardContainer>
+        <RedCardContainer className="onlyBackGround">
+          <MainDescriptionContainer>
+            <h1>Your favorite app to save your favorite books.</h1>
+          </MainDescriptionContainer>
+        </RedCardContainer>
         <AllFooter>Footer</AllFooter>
       </WhiteCardContainer>
     </RootContainer>
