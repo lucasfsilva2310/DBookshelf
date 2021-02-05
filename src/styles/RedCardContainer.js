@@ -12,6 +12,7 @@ export const RedCardContainer = styled.div`
   height: 65vh;
   margin: 0 auto 0 auto;
   display: flex;
+  flex-direction: column;
 
   @media only screen and (max-width: 1240px) {
     margin: 1% auto 0 auto;
