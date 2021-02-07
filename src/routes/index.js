@@ -5,12 +5,12 @@ const Routes = () => {
   return (
     <>
       <Switch>
-        <Route exact to="/">
+        <Route exact path="/">
           <HomePage />
         </Route>
-        <Route exact to="/search"></Route>
-        <Route exact to="/description"></Route>
-        <Route exact to="/favorites"></Route>
+        <Route exact path="/search"></Route>
+        <Route exact path="/description"></Route>
+        <Route exact path="/favorites"></Route>
       </Switch>
     </>
   );
