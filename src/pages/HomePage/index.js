@@ -8,7 +8,7 @@ import MainDescription from "./MainDescription/index";
 import SecondDescription from "./SecondDescription/index";
 import { AllFooter } from "../../styles/AllFooter";
 import SearchInputAndButton from "../../components/SearchInput-Button/index";
-
+import RegisterButton from "../../components/RegisterButton/index";
 const HomePage = () => {
   return (
     <>
@@ -19,6 +19,7 @@ const HomePage = () => {
           <LoginButton />
         </AllHeader>
         <RedCardContainer>
+          <RegisterButton />
           <MainDescription />
           <SecondDescription />
           <SearchInputAndButton />

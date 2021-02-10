@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainDescriptionContainer = styled.div`
   width: 26vw;
   height: 20vh;
-  margin: 14vh auto 0 1vw;
+  margin: 3vh auto 0 1vw;
   h1 {
     font-size: 3.5rem;
   }

@@ -24,6 +24,7 @@ export const InputDiv = styled.div`
     border-radius: 25px;
     width: 10vw;
     height: 4vh;
+    font-size: 1.5rem;
   }
   @media only screen and (max-width: 1275px) {
     input {
@@ -33,6 +34,11 @@ export const InputDiv = styled.div`
   @media only screen and (max-width: 1140px) {
     input {
       font-size: 0.75rem;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    button {
+      font-size: 1rem;
     }
   }
 `;
