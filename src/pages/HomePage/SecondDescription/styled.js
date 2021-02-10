@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SecondDescriptionContainer = styled.div`
   width: 28vw;
   height: 10vh;
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 1vw;
   h2 {
     font-size: 1.5rem;
   }

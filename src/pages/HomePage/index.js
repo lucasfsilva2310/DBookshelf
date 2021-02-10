@@ -7,6 +7,7 @@ import { RedCardContainer } from "../../styles/RedCardContainer";
 import MainDescription from "./MainDescription/index";
 import SecondDescription from "./SecondDescription/index";
 import { AllFooter } from "../../styles/AllFooter";
+import SearchInputAndButton from "../../components/SearchInput-Button/index";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
         <RedCardContainer>
           <MainDescription />
           <SecondDescription />
+          <SearchInputAndButton />
         </RedCardContainer>
         <AllFooter>Footer</AllFooter>
       </WhiteCardContainer>
