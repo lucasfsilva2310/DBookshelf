@@ -9,7 +9,22 @@ import SecondDescription from "./SecondDescription/index";
 import { AllFooter } from "../../styles/AllFooter";
 import SearchInputAndButton from "../../components/SearchInput-Button/index";
 import RegisterButton from "../../components/RegisterButton/index";
+
+import { useDispatch } from "react-redux";
+import { handlingSearchThunk } from "../../store/modules/SearchBooks/thunks";
+import { useHistory } from "react-router-dom";
+
 const HomePage = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const toSearchBooksApi = (value) => {
+    console.log(value);
+    dispatch(handlingSearchThunk(value));
+    setTimeout(() => history.push("/search"), 1500);
+    //1 segundo e meio de delay, verificar se isso é o suficente para a API do google;
+  };
+
   return (
     <>
       <WhiteCardContainer>
@@ -22,7 +37,7 @@ const HomePage = () => {
           <RegisterButton />
           <MainDescription />
           <SecondDescription />
-          <SearchInputAndButton />
+          <SearchInputAndButton func={toSearchBooksApi} />
         </RedCardContainer>
         <AllFooter>Footer</AllFooter>
       </WhiteCardContainer>

@@ -1,5 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/index";
+import SearchPage from "../pages/SearchPage/index";
 
 const Routes = () => {
   return (
@@ -9,7 +10,7 @@ const Routes = () => {
           <HomePage />
         </Route>
         <Route exact path="/search">
-          Search
+          <SearchPage />
         </Route>
         <Route exact path="/description">
           Description
