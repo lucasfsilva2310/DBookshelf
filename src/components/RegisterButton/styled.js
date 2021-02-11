@@ -18,6 +18,8 @@ export const RegisterDiv = styled.div`
     height: 4vh;
     margin-left: 1vw;
     font-size: 1.8rem;
+    border: none;
+    /* outline: none; retirar borda */
   }
   @media only screen and (max-width: 1475px) {
     h3 {

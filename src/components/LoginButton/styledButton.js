@@ -11,5 +11,7 @@ export const LoginContainer = styled.div`
     border-radius: 25px;
     width: 10vw;
     height: 4vh;
+    border: none;
+    /* outline: none; retirar borda */
   }
 `;

@@ -24,7 +24,10 @@ export const InputDiv = styled.div`
     border-radius: 25px;
     width: 10vw;
     height: 4vh;
+    margin-right: 1vw;
     font-size: 1.5rem;
+    border: none;
+    /* outline: none; retirar borda */
   }
   @media only screen and (max-width: 1275px) {
     input {
