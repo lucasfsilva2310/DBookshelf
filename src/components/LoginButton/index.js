@@ -1,10 +1,12 @@
 import { LoginContainer } from "./styledButton";
+import { useHistory } from "react-router-dom";
 
 const LoginButton = () => {
+  const history = useHistory();
   return (
     <>
       <LoginContainer>
-        <button>Login</button>
+        <button onClick={() => history.push("/login")}>Login</button>
       </LoginContainer>
     </>
   );

@@ -8,9 +8,21 @@ const Routes = () => {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route exact path="/search"></Route>
-        <Route exact path="/description"></Route>
-        <Route exact path="/favorites"></Route>
+        <Route exact path="/search">
+          Search
+        </Route>
+        <Route exact path="/description">
+          Description
+        </Route>
+        <Route exact path="/favorites">
+          Favorites
+        </Route>
+        <Route exact path="/register">
+          Register
+        </Route>
+        <Route exact path="/login">
+          Login
+        </Route>
       </Switch>
     </>
   );
