@@ -6,4 +6,5 @@ export const AllHeader = styled.div`
   margin: 0 auto 0 auto;
   border-radius: 25px;
   display: flex;
+  justify-content: space-around;
 `;

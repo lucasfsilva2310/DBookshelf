@@ -12,6 +12,12 @@ export const LoginContainer = styled.div`
     width: 10vw;
     height: 4vh;
     border: none;
+    font-size: 1.5rem;
     /* outline: none; retirar borda */
+  }
+  @media only screen and (max-width: 680px) {
+    button {
+      font-size: 1.1rem;
+    }
   }
 `;

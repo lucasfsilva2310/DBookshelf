@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBarContainer = styled.div`
-  width: 50%;
+  width: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -11,4 +11,9 @@ export const NavBarContainer = styled.div`
     color: black;
     font-size: 1.4rem;
   }
+  @media only screen and (max-width: 750px) {
+    a {
+      font-size: 1.2rem;
+    }
+  } ;
 `;
