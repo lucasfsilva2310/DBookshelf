@@ -1,7 +1,9 @@
 import { BookCardContainer } from "../BookCardsContainer/styled";
 import { BookCard, ImageBookContainer, InfoBookContainer } from "./styled";
 
-const BookInfo = () => {
+const BookInfo = ({ Books }) => {
+  // Books sao os dados recebidos pelo state global
+
   return (
     <BookCardContainer>
       {/* Inserir Map de livros aqui */}
