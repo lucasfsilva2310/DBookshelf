@@ -1,9 +1,11 @@
 import { InputDiv } from "./styled";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const SearchInputAndButton = ({ func }) => {
   const [value, setValue] = useState("");
-
+  const searched = useSelector((state) => state.infoBooks);
+  console.log("Books Data: ", searched); //Retirar
   const handleInput = (ev) => {
     setValue(ev.target.value);
   };
