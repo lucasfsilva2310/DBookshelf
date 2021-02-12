@@ -1,6 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/index";
 import SearchPage from "../pages/SearchPage/index";
+import DescriptionPage from "../pages/DescriptionPage/index";
 
 const Routes = () => {
   return (
@@ -13,7 +14,7 @@ const Routes = () => {
           <SearchPage />
         </Route>
         <Route exact path="/description">
-          Description
+          <DescriptionPage />
         </Route>
         <Route exact path="/favorites">
           Favorites

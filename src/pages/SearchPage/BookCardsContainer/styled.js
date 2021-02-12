@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BookCardContainer = styled.div`
+export const BookCardsContainer = styled.div`
   width: 100%;
   height: 75%;
   display: flex;

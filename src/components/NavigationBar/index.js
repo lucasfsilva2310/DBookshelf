@@ -5,7 +5,7 @@ const NavigationBar = () => {
   return (
     <>
       <NavBarContainer>
-        <Link exact to="/home">
+        <Link exact to="/">
           Home
         </Link>
         <Link exact to="/favorites">

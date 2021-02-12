@@ -8,6 +8,7 @@ export const getDescriptionsThunk = (data) => {
     publisher: data.publisher,
     published: data.published,
     description: data.description,
+    img: data.img,
   };
   console.log("Thunk: ", descriptionBook); //Retirar
   return (dispatch, getState) => {

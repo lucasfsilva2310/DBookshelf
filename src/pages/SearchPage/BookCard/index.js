@@ -1,4 +1,4 @@
-import { BookCardContainer } from "../BookCardsContainer/styled";
+import { BookCardsContainer } from "../BookCardsContainer/styled";
 import { BookCard, ImageBookContainer, InfoBookContainer } from "./styled";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -11,7 +11,7 @@ const BookInfo = ({ Books }) => {
   //adicionar state global
 
   return (
-    <BookCardContainer>
+    <BookCardsContainer>
       {BookTest.map((book, index) => {
         return (
           <BookCard
@@ -34,7 +34,7 @@ const BookInfo = ({ Books }) => {
           </BookCard>
         );
       })}
-    </BookCardContainer>
+    </BookCardsContainer>
   );
 };
 
