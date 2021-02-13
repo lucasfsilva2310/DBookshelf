@@ -6,6 +6,18 @@ import {
 } from "./styled";
 
 const CardDescriptionPage = ({ book }) => {
+  const toLocalStorage = (newBook) => {
+    if (localStorage.getItem("books") !== null) {
+      let alreadyFav = JSON.parse(localStorage.getItem("books"));
+      alreadyFav.push(book);
+      localStorage.setItem("books", JSON.stringify(alreadyFav));
+      return;
+    }
+    let startingSequence = [];
+    startingSequence.push(book);
+    localStorage.setItem("books", JSON.stringify(startingSequence));
+  };
+
   return (
     <DescriptionCardContainer>
       <ImgContainer>
@@ -19,7 +31,7 @@ const CardDescriptionPage = ({ book }) => {
         <p>{`Description: ${book.description}`}</p>
       </BookDescriptionContainer>
       <FavoritesButtonContainer>
-        <button>Add to Favorites!</button>
+        <button onClick={() => toLocalStorage(book)}>Add to Favorites!</button>
       </FavoritesButtonContainer>
     </DescriptionCardContainer>
   );
