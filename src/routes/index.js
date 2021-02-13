@@ -2,6 +2,7 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/index";
 import SearchPage from "../pages/SearchPage/index";
 import DescriptionPage from "../pages/DescriptionPage/index";
+import Favorites from "../pages/FavoritesPage/index";
 
 const Routes = () => {
   return (
@@ -17,7 +18,7 @@ const Routes = () => {
           <DescriptionPage />
         </Route>
         <Route exact path="/favorites">
-          Favorites
+          <Favorites />
         </Route>
         <Route exact path="/register">
           Register

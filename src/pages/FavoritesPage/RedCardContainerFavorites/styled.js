@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const RedCardContainerDescription = styled.div`
+export const RedCardContainerFavorites = styled.div`
   background: #fc5247;
-  background-image: url("https://i.postimg.cc/fy2K6FZ3/descriptionpage.png"); //
+  background-image: url("https://i.postimg.cc/rwvhVv4x/favoritespage.png"); //
   background-repeat: repeat; //  BackGround Image, trocar em cada pagina
-  background-size: 50% 90%;
-  background-position: 50% 130%;
+  background-size: 60% 100%;
+  background-position: 130% 110%;
   background-clip: border-box;
   border-radius: 25px;
   width: 75vw;
