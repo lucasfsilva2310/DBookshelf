@@ -5,7 +5,7 @@ export const RedCardContainerSearch = styled.div`
   background-image: url("https://i.postimg.cc/nhR1nv2f/searchpageback.png"); //
   background-repeat: no-repeat; //  BackGround Image, trocar em cada pagina
   background-size: 50% 90%;
-  background-position: 50% 130%;
+  background-position: 50% 180%;
   background-clip: border-box;
   border-radius: 25px;
   width: 75vw;
