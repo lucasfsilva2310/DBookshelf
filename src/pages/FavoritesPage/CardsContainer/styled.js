@@ -42,6 +42,7 @@ export const TitleContainerFav = styled.div`
   justify-content: center;
   h1 {
     font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
   }
 `;
 
@@ -52,6 +53,7 @@ export const DescriptionContainerFav = styled.div`
   height: 34%;
   margin: 1% auto;
   overflow: auto;
+  font-family: "Roboto", sans-serif;
   h2 {
     font-size: 1.25rem;
     margin-left: 5%;
@@ -86,7 +88,11 @@ export const RemoveFromFavButtonContainer = styled.div`
     height: 4vh;
     border: none;
     font-size: 1.5rem;
-    /* outline: none; retirar borda */
+    outline: none;
+    transition: background 0.5s;
+  }
+  button:focus {
+    background: #bc1207;
   }
   @media only screen and (max-width: 1110px) {
     margin: 2% auto;

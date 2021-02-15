@@ -27,7 +27,11 @@ export const InputDiv = styled.div`
     margin-right: 1vw;
     font-size: 1.5rem;
     border: none;
-    /* outline: none; retirar borda */
+    transition: background 0.5s;
+    outline: none;
+  }
+  button:focus {
+    background: #bc1207;
   }
   @media only screen and (max-width: 1275px) {
     input {

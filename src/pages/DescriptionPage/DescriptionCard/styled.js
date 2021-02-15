@@ -34,6 +34,8 @@ export const BookDescriptionContainer = styled.div`
   flex-direction: column;
   line-height: 1.4;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+
   h1 {
     margin-top: 4%;
     font-size: 1.6rem;
@@ -50,7 +52,7 @@ export const BookDescriptionContainer = styled.div`
   p {
     font-size: 1.1rem;
     margin-left: 4%;
-    line-height: 1.2;
+    line-height: 1.4;
     margin-top: 2%;
   }
 `;
@@ -69,7 +71,11 @@ export const FavoritesButtonContainer = styled.div`
     height: 4vh;
     border: none;
     font-size: 1.5rem;
-    /* outline: none; retirar borda */
+    outline: none;
+    transition: background 0.5s;
+  }
+  button:focus {
+    background: #bc1207;
   }
   p {
     font-size: 1.3rem;

@@ -6,6 +6,7 @@ export const SecondDescriptionContainer = styled.div`
   margin: 0 auto 0 1vw;
   h2 {
     font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif;
   }
   @media only screen and (max-width: 1420px) {
     h2 {

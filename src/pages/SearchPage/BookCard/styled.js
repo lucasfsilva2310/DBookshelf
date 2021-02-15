@@ -34,7 +34,7 @@ export const InfoBookContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  font-family: "Roboto", sans-serif;
   h1 {
     font-size: 1.5rem;
     margin-left: 5%;

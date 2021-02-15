@@ -49,10 +49,10 @@ const FavoritesPage = () => {
                   <img src={book.img} alt={book.title} />
                 </ImgContainerFav>
                 <DescriptionContainerFav>
-                  <h2>{`Author: ${book.author}`}</h2>
-                  <h3>{`Publisher: ${book.publisher}`}</h3>
-                  <h3>{`Published: ${book.published}`}</h3>
-                  <p>{`Description: ${book.description}`}</p>
+                  <h2>{`Author:   ${book.author}`}</h2>
+                  <h3>{`Publisher:  ${book.publisher}`}</h3>
+                  <h3>{`Published:  ${book.published}`}</h3>
+                  <p>{`Description:  ${book.description}`}</p>
                 </DescriptionContainerFav>
                 <RemoveFromFavButtonContainer>
                   <button onClick={() => removeFromLocalStorage(book)}>
