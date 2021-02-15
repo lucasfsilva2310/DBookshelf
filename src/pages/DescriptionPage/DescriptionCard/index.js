@@ -5,18 +5,40 @@ import {
   FavoritesButtonContainer,
 } from "./styled";
 
+import {
+  addToFavoritesThunk,
+  getFavoritesThunk,
+} from "../../../store/modules/FavoriteBooks/thunks";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+
 const CardDescriptionPage = ({ book }) => {
+  const dispatch = useDispatch();
+  const [checkFav, setCheckFav] = useState(false);
+  const [favAdded, setFavAdded] = useState(false);
+
+  const alreadyInFav = useSelector((state) => state.favoriteList);
+
   const toLocalStorage = (newBook) => {
-    if (localStorage.getItem("books") !== null) {
-      let alreadyFav = JSON.parse(localStorage.getItem("books"));
-      alreadyFav.push(book);
-      localStorage.setItem("books", JSON.stringify(alreadyFav));
+    const searchInFav = alreadyInFav.find(
+      (bookFav) => bookFav.title === book.title
+    );
+    if (searchInFav !== undefined) {
+      setCheckFav(true);
+
       return;
     }
-    let startingSequence = [];
-    startingSequence.push(book);
-    localStorage.setItem("books", JSON.stringify(startingSequence));
+    dispatch(addToFavoritesThunk(newBook));
+    setFavAdded(true);
   };
+
+  useEffect(() => {
+    dispatch(getFavoritesThunk(JSON.parse(localStorage.getItem("books"))));
+    setCheckFav(false);
+    setFavAdded(false);
+  }, []);
 
   return (
     <DescriptionCardContainer>
@@ -32,6 +54,8 @@ const CardDescriptionPage = ({ book }) => {
       </BookDescriptionContainer>
       <FavoritesButtonContainer>
         <button onClick={() => toLocalStorage(book)}>Add to Favorites!</button>
+        {checkFav && <p>It is already added to the favorite list!</p>}
+        {favAdded && <p>Book added to your favorite list!</p>}
       </FavoritesButtonContainer>
     </DescriptionCardContainer>
   );

@@ -14,7 +14,7 @@ export const BookCard = styled.div`
   background: #f2f2fc;
   border-radius: 25px;
   width: 40%;
-  height: 70%;
+  height: 80%;
   margin: 2%;
   display: flex;
   flex-direction: column;
@@ -29,8 +29,8 @@ export const ImgContainerFav = styled.div`
   align-items: center;
   justify-content: center;
   img {
-    width: 40%;
-    height: 70%;
+    width: 35%;
+    height: 90%;
   }
 `;
 

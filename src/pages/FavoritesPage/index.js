@@ -13,14 +13,23 @@ import {
   RemoveFromFavButtonContainer,
 } from "./CardsContainer/styled";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import {
+  removeFromFavoritesThunk,
+  getFavoritesThunk,
+} from "../../store/modules/FavoriteBooks/thunks";
 
 const FavoritesPage = () => {
-  const books = JSON.parse(localStorage.getItem("books"));
-  useEffect(() => {}, [books]);
-  const removeFromLocalStorage = (titleRemoved) => {
-    console.log("removeFromStorage: ", titleRemoved);
-    let removedBooks = books.filter((book) => book.title !== titleRemoved);
-    localStorage.setItem("books", JSON.stringify(removedBooks));
+  const dispatch = useDispatch();
+  const favoriteBooks = useSelector((state) => state.favoriteList) || [];
+  console.log("localstorage: ", favoriteBooks);
+
+  useEffect(() => {
+    dispatch(getFavoritesThunk(JSON.parse(localStorage.getItem("books"))));
+  }, []);
+  const removeFromLocalStorage = (bookRemoved) => {
+    dispatch(removeFromFavoritesThunk(bookRemoved));
   };
   return (
     <WhiteCardContainer>
@@ -30,7 +39,7 @@ const FavoritesPage = () => {
       </AllHeader>
       <RedCardContainerFavorites>
         <BookCardsContainer>
-          {books.map((book, index) => {
+          {favoriteBooks.map((book, index) => {
             return (
               <BookCard>
                 <TitleContainerFav>
@@ -46,7 +55,7 @@ const FavoritesPage = () => {
                   <p>{`Description: ${book.description}`}</p>
                 </DescriptionContainerFav>
                 <RemoveFromFavButtonContainer>
-                  <button onClick={() => removeFromLocalStorage(book.title)}>
+                  <button onClick={() => removeFromLocalStorage(book)}>
                     Remove from favorites
                   </button>
                 </RemoveFromFavButtonContainer>

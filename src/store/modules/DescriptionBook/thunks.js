@@ -10,7 +10,6 @@ export const getDescriptionsThunk = (data) => {
     description: data.description,
     img: data.img,
   };
-  console.log("Thunk: ", descriptionBook); //Retirar
   return (dispatch, getState) => {
     dispatch(getDescriptions(descriptionBook));
   };

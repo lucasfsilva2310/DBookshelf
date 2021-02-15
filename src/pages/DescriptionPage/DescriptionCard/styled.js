@@ -22,6 +22,7 @@ export const ImgContainer = styled.div`
   img {
     width: 70%;
     height: 70%;
+    margin-right: 12%;
   }
 `;
 
@@ -58,8 +59,9 @@ export const FavoritesButtonContainer = styled.div`
   width: 98%;
   height: 18%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   button {
     background: #fc5247;
     border-radius: 25px;
@@ -69,8 +71,50 @@ export const FavoritesButtonContainer = styled.div`
     font-size: 1.5rem;
     /* outline: none; retirar borda */
   }
-  @media only screen and (max-width: 1200px) {
-    justify-content: flex-start;
+  p {
+    font-size: 1.3rem;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 3%;
+  }
+
+  @media only screen and (max-width: 1480px) {
+    p {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 1360px) {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  @media only screen and (max-width: 1245px) {
+    p {
+      font-size: 1rem;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  @media only screen and (max-width: 950px) {
+    p {
+      font-size: 0px;
+    }
+    p:before {
+      font-size: 1rem;
+      content: "Already in favorite list!";
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    p {
+      font-size: 0px;
+    }
+    p:before {
+      font-size: 0.8rem;
+      content: "Already in favorite list!";
+    }
   }
   @media only screen and (max-width: 865px) {
     button {

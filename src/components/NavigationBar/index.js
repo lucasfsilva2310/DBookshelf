@@ -1,6 +1,5 @@
 import { NavBarContainer } from "./styledNav";
 import { Link } from "react-router-dom";
-
 const NavigationBar = () => {
   return (
     <>
