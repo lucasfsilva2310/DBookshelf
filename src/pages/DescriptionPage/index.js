@@ -7,9 +7,14 @@ import { RedCardContainerDescription } from "./RedCardContainerDescription/style
 import { AllFooter } from "../../styles/AllFooter";
 import { useSelector } from "react-redux";
 import CardDescriptionPage from "./DescriptionCard/index";
+import { useEffect } from "react";
 
 const DescriptionPage = () => {
   const book = useSelector((state) => state.descriptionBook);
+
+  useEffect(() => {
+    document.body.style.cursor = "default";
+  }, []);
 
   return (
     <>
@@ -22,7 +27,7 @@ const DescriptionPage = () => {
         <RedCardContainerDescription>
           <CardDescriptionPage book={book} />
         </RedCardContainerDescription>
-        <AllFooter>Footer</AllFooter>
+        <AllFooter></AllFooter>
       </WhiteCardContainer>
     </>
   );

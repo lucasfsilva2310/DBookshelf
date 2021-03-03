@@ -43,7 +43,7 @@ const CardDescriptionPage = ({ book }) => {
   return (
     <DescriptionCardContainer>
       <ImgContainer>
-        <img src={book.img} alt={book.title} />
+        <img src={book.image} alt={book.title} />
       </ImgContainer>
       <BookDescriptionContainer>
         <h1>{book.title}</h1>

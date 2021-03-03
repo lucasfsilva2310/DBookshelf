@@ -40,6 +40,9 @@ export const BookDescriptionContainer = styled.div`
     margin-top: 4%;
     font-size: 1.6rem;
     margin-left: 5%;
+    margin-bottom: 2%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
   }
   h2 {
     font-size: 1.25rem;

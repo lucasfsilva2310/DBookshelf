@@ -19,8 +19,11 @@ const HomePage = () => {
   const history = useHistory();
 
   const toSearchBooksApi = (value) => {
-    console.log("Input Digitado: ", value);
-    dispatch(handlingSearchThunk(value));
+    const forSearch = value.split(" ").join("+");
+    document.body.style.cursor = "wait";
+
+    console.log("Input Digitado: ", forSearch);
+    dispatch(handlingSearchThunk(forSearch));
     setTimeout(() => history.push("/search"), 1500);
     //1 segundo e meio de delay, verificar se isso é o suficente para a API do google;
   };
@@ -39,7 +42,7 @@ const HomePage = () => {
           <SecondDescription />
           <SearchInputAndButton func={toSearchBooksApi} />
         </RedCardContainer>
-        <AllFooter>Footer</AllFooter>
+        <AllFooter></AllFooter>
       </WhiteCardContainer>
     </>
   );

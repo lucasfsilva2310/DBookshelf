@@ -36,8 +36,11 @@ export const InfoBookContainer = styled.div`
   flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-top: 2%;
     margin-left: 5%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
   }
   h2 {
     font-size: 1.2rem;
@@ -48,4 +51,9 @@ export const InfoBookContainer = styled.div`
     font-size: 1rem;
     margin-left: 5%;
   }
+`;
+
+export const BookImage = styled.img`
+  width: 70%;
+  height: 70%;
 `;

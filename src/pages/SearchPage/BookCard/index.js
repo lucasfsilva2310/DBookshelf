@@ -1,6 +1,11 @@
 import { BookCardsContainer } from "../BookCardsContainer/styled";
-import { BookCard, ImageBookContainer, InfoBookContainer } from "./styled";
-import { useDispatch } from "react-redux";
+import {
+  BookCard,
+  BookImage,
+  ImageBookContainer,
+  InfoBookContainer,
+} from "./styled";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { getDescriptionsThunk } from "../../../store/modules/DescriptionBook/thunks";
 
@@ -9,20 +14,30 @@ const BookInfo = ({ Books }) => {
   const history = useHistory();
   // Books sao os dados recebidos pelo state global
   //adicionar state global
+  const searched = useSelector((state) => state.infoBooks);
+  console.log("Books Data: ", searched); //Retirar
 
   return (
     <BookCardsContainer>
-      {BookTest.map((book, index) => {
+      {searched.map((book, index) => {
         return (
           <BookCard
             onClick={() => {
+              document.body.style.cursor = "wait";
               dispatch(getDescriptionsThunk(book));
               setTimeout(() => history.push("/description"), 1500);
             }}
             key={index}
           >
             <ImageBookContainer>
-              <img src={book.img} alt="book cape" />
+              {book.image !== " " ? (
+                <img src={book.image} alt={book.title} />
+              ) : (
+                <BookImage
+                  src="https://i.postimg.cc/Tw1hZH1f/pngegg-4.png"
+                  alt={book.title}
+                />
+              )}
             </ImageBookContainer>
             <InfoBookContainer>
               <h1>{book.title}</h1>

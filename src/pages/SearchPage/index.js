@@ -12,9 +12,14 @@ import BookInfo from "./BookCard/index";
 import { useDispatch } from "react-redux";
 import { handlingSearchThunk } from "../../store/modules/SearchBooks/thunks";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const SearchPage = () => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    document.body.style.cursor = "default";
+  }, []);
 
   const searched = useSelector((state) => state.infoBooks);
   console.log("Books Data: ", searched); //Retirar
@@ -37,7 +42,7 @@ const SearchPage = () => {
           </SearchBarContainer>
           <BookInfo />
         </RedCardContainerSearch>
-        <AllFooter>Footer</AllFooter>
+        <AllFooter></AllFooter>
       </WhiteCardContainer>
     </>
   );

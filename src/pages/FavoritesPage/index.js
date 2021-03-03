@@ -46,7 +46,7 @@ const FavoritesPage = () => {
                   <h1>{book.title}</h1>
                 </TitleContainerFav>
                 <ImgContainerFav>
-                  <img src={book.img} alt={book.title} />
+                  <img src={book.image} alt={book.title} />
                 </ImgContainerFav>
                 <DescriptionContainerFav>
                   <h2>{`Author:   ${book.author}`}</h2>
@@ -64,7 +64,7 @@ const FavoritesPage = () => {
           })}
         </BookCardsContainer>
       </RedCardContainerFavorites>
-      <AllFooter>Footer</AllFooter>
+      <AllFooter></AllFooter>
     </WhiteCardContainer>
   );
 };

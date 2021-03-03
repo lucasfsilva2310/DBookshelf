@@ -8,7 +8,7 @@ export const getDescriptionsThunk = (data) => {
     publisher: data.publisher,
     published: data.published,
     description: data.description,
-    img: data.img,
+    image: data.image,
   };
   return (dispatch, getState) => {
     dispatch(getDescriptions(descriptionBook));

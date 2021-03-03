@@ -41,8 +41,10 @@ export const TitleContainerFav = styled.div`
   display: flex;
   justify-content: center;
   h1 {
-    font-size: 1.4rem;
+    margin-top: 2%;
+    font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
+    font-weight: 600;
   }
 `;
 
