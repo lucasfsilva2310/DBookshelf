@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Dbookshelf ![Booshelf image](https://img.icons8.com/dusk/64/000000/book-shelf.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Dbookshelf Home image](https://i.postimg.cc/yNKGjFXC/Home-DBook-Sheld.png)
 
-## Available Scripts
+This is a simple app using the [Google Books API](https://developers.google.com/books) for people who want to serach for your favorite books that you love, or simply just want to save it to buy/read later.
 
-In the project directory, you can run:
+## Getting Started
 
-### `yarn start`
+I used the following libraries/frameworks to build this App:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [React](https://reactjs.org/)
+2. [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+3. [Redux](https://react-redux.js.org/)
+4. [Google Books API](https://developers.google.com/books)
+5. [styled-components](https://styled-components.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+And the following fonts from [Google Fonts](https://fonts.google.com/) :
 
-### `yarn test`
+1. [Roboto](https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap)
+2. [Josefin Sans](https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto:wght@300&display=swap)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Google Books API is pretty straightforward, Google has a pretty good documentation and tutorial for that, so don´t worry.
 
-### `yarn build`
+Styled components is very simple to use too, you just have to install it first:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        yarn add styled-components | npx install styled-components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+They have a very good documentation as well.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Fonts
 
-### `yarn eject`
+For the fonts, it just needs a basic instruction, after you found which fonts do you want, you add it to your "cart", and from there, you´ĺl get a specific link tag that you´ll insert inside your HTML head tag, and voila! You´re all set to start using it as a font-family attribute value.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Steps
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+We have the home page, as you should see at the start of the ReadMe. From there you can simply type the book title, author, or even the publisher, and hit the search button. You´ll be sent to the 'Search Page'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Search Page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Search Page](https://i.postimg.cc/Pqf3L337/Search-Page.png)
 
-## Learn More
+Here you´ll get the results from the input that you typed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you want to, after you click on one the the book cards, you´ll be sent to the description page, from where you can decide if you want to add this book to your favorites list, or just go back and keep searching.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Description page
 
-### Code Splitting
+![Description Page](https://i.postimg.cc/7YyNGtbN/description-Page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+In this page, you´ll have a better look at the book, and its description. You caa add the chosen book to your favorites list.
 
-### Analyzing the Bundle Size
+## Favorites Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Favorites Page](https://i.postimg.cc/FzX0S1FK/Favorites-Page.png)
 
-### Making a Progressive Web App
+Inside this page, you´ll have all the books that you previously added to your favorites. You can use this page to keep track of the books you love the most, or simply to organize a set of books that you´d like to read/buy it later!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+[Myself :)](https://github.com/lucasfsilva2310)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledments
 
-### Deployment
+This app was build with the intent of keep track of users booklist, it´s the as the same implies, a digital bookshelf, that you can organize all of your favorite books.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for coming in here! See you at the next repo ![Thumbs up](https://img.icons8.com/cute-clipart/64/000000/facebook-like.png)

@@ -11,34 +11,67 @@ export const handlingSearchThunk = (data) => {
     )
     .then((response) => {
       if (response.data.items.length < 10) {
+        console.log(response);
         for (let i = 0; i < response.data.items.length; i++) {
+          console.log(response.data.items[i]);
           const book = {
-            title: response.data.items[i].volumeInfo.title,
-            author: response.data.items[i].volumeInfo.authors[0],
-            publisher: response.data.items[i].volumeInfo.publisher,
-            published: response.data.items[i].volumeInfo.publishedDate,
-            description: response.data.items[i].volumeInfo.description,
-            image: response.data.items[i].volumeInfo.imageLinks.thumbnail,
+            title:
+              response.data.items[i].volumeInfo.title !== undefined
+                ? response.data.items[i].volumeInfo.title
+                : " ",
+            author:
+              response.data.items[i].volumeInfo.authors !== undefined
+                ? response.data.items[i].volumeInfo.authors
+                : " ",
+            publisher:
+              response.data.items[i].volumeInfo.publisher !== undefined
+                ? response.data.items[i].volumeInfo.publisher
+                : " ",
+            published:
+              response.data.items[i].volumeInfo.publishedDate !== undefined
+                ? response.data.items[i].volumeInfo.publishedDate
+                : " ",
+            description:
+              response.data.items[i].volumeInfo.description !== undefined
+                ? response.data.items[i].volumeInfo.description
+                : " ",
+            image:
+              response.data.items[i].volumeInfo.imageLinks !== undefined
+                ? response.data.items[i].volumeInfo.imageLinks.thumbnail
+                : " ",
           };
-          console.log(response.data.items[i].volumeInfo.title);
           booksData.push(book);
-
-          console.log(response);
         }
       }
+      console.log(response);
       for (let i = 0; i < 10; i++) {
+        console.log(response.data.items[i]);
         const book = {
-          title: response.data.items[i].volumeInfo.title,
-          author: response.data.items[i].volumeInfo.authors[0],
-          publisher: response.data.items[i].volumeInfo.publisher,
-          published: response.data.items[i].volumeInfo.publishedDate,
-          description: response.data.items[i].volumeInfo.description,
+          title:
+            response.data.items[i].volumeInfo.title !== undefined
+              ? response.data.items[i].volumeInfo.title
+              : " ",
+          author:
+            response.data.items[i].volumeInfo.authors !== undefined
+              ? response.data.items[i].volumeInfo.authors
+              : " ",
+          publisher:
+            response.data.items[i].volumeInfo.publisher !== undefined
+              ? response.data.items[i].volumeInfo.publisher
+              : " ",
+          published:
+            response.data.items[i].volumeInfo.publishedDate !== undefined
+              ? response.data.items[i].volumeInfo.publishedDate
+              : " ",
+          description:
+            response.data.items[i].volumeInfo.description !== undefined
+              ? response.data.items[i].volumeInfo.description
+              : " ",
           image:
             response.data.items[i].volumeInfo.imageLinks !== undefined
               ? response.data.items[i].volumeInfo.imageLinks.thumbnail
               : " ",
         };
-        console.log(response.data.items[i].volumeInfo.title);
 
         booksData.push(book);
         console.log(response);

@@ -8,6 +8,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { getDescriptionsThunk } from "../../../store/modules/DescriptionBook/thunks";
+import { useEffect } from "react";
 
 const BookInfo = ({ Books }) => {
   const dispatch = useDispatch();
@@ -19,35 +20,51 @@ const BookInfo = ({ Books }) => {
 
   return (
     <BookCardsContainer>
-      {searched.map((book, index) => {
-        return (
-          <BookCard
-            onClick={() => {
-              document.body.style.cursor = "wait";
-              dispatch(getDescriptionsThunk(book));
-              setTimeout(() => history.push("/description"), 1500);
-            }}
-            key={index}
-          >
-            <ImageBookContainer>
-              {book.image !== " " ? (
-                <img src={book.image} alt={book.title} />
-              ) : (
-                <BookImage
-                  src="https://i.postimg.cc/Tw1hZH1f/pngegg-4.png"
-                  alt={book.title}
-                />
-              )}
-            </ImageBookContainer>
-            <InfoBookContainer>
-              <h1>{book.title}</h1>
-              <h2>{`Author: ${book.author}`}</h2>
-              <p>{`Publisher: ${book.publisher}`}</p>
-              <p>{`Published: ${book.published}`}</p>
-            </InfoBookContainer>
-          </BookCard>
-        );
-      })}
+      {searched.length > 0 ? (
+        searched.map((book, index) => {
+          return (
+            <BookCard
+              onClick={() => {
+                document.body.style.cursor = "wait";
+                dispatch(getDescriptionsThunk(book));
+                setTimeout(() => history.push("/description"), 1500);
+              }}
+              key={index}
+            >
+              <ImageBookContainer>
+                {book.image !== " " ? (
+                  <img src={book.image} alt={book.title} />
+                ) : (
+                  <BookImage
+                    src="https://i.postimg.cc/Tw1hZH1f/pngegg-4.png"
+                    alt={book.title}
+                  />
+                )}
+              </ImageBookContainer>
+              <InfoBookContainer>
+                <h1>{book.title}</h1>
+                {book.author !== " " ? (
+                  <h2>{`Author: ${book.author}`}</h2>
+                ) : (
+                  <h2>{`Author: Not inserted`}</h2>
+                )}
+                {book.publisher !== " " ? (
+                  <p>{`Publisher: ${book.publisher}`}</p>
+                ) : (
+                  <p>{`Publisher: Not inserted`}</p>
+                )}
+                {book.published !== " " ? (
+                  <p>{`Published: ${book.published}`}</p>
+                ) : (
+                  <p>{`Published: Not inserted`}</p>
+                )}
+              </InfoBookContainer>
+            </BookCard>
+          );
+        })
+      ) : (
+        <h1 style={{ color: "white" }}>Loading . . </h1>
+      )}
     </BookCardsContainer>
   );
 };

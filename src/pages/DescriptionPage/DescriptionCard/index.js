@@ -47,10 +47,26 @@ const CardDescriptionPage = ({ book }) => {
       </ImgContainer>
       <BookDescriptionContainer>
         <h1>{book.title}</h1>
-        <h2>{`Author: ${book.author}`}</h2>
-        <h3>{`Publisher: ${book.publisher}`}</h3>
-        <h3>{`Published: ${book.published}`}</h3>
-        <p>{`Description: ${book.description}`}</p>
+        {book.author !== " " ? (
+          <h2>{`Author: ${book.author}`}</h2>
+        ) : (
+          <h2>{`Author: Not inserted`}</h2>
+        )}
+        {book.publisher !== " " ? (
+          <p>{`Publisher: ${book.publisher}`}</p>
+        ) : (
+          <p>{`Publisher: Not inserted`}</p>
+        )}
+        {book.published !== " " ? (
+          <p>{`Published: ${book.published}`}</p>
+        ) : (
+          <p>{`Published: Not inserted`}</p>
+        )}
+        {book.description !== " " ? (
+          <p>{`Description: ${book.description}`}</p>
+        ) : (
+          <p>{`Description: Not inserted`}</p>
+        )}
       </BookDescriptionContainer>
       <FavoritesButtonContainer>
         <button onClick={() => toLocalStorage(book)}>Add to Favorites!</button>
