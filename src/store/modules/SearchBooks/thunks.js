@@ -5,9 +5,11 @@ export const handlingSearchThunk = (data) => {
   // requisição com axios
   const booksData = [];
 
+  const GOOGLE_KEY = ''
+  
   axios
     .get(
-      `https://www.googleapis.com/books/v1/volumes?q=${data}&key=AIzaSyCFB_08BtB6MCSLqdEGhpy2yR73QAxjdCg`
+      `https://www.googleapis.com/books/v1/volumes?q=${data}&key=${GOOGLE_KEY}`
     )
     .then((response) => {
       if (response.data.items.length < 10) {
